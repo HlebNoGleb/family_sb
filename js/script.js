@@ -4,8 +4,14 @@ document.body.onload = function(){
 		if(!preloader.classList.contains('done')){
 			preloader.classList.add('done');
 			$('body').css({'overflow-y':'scroll'});
+				setTimeout(function(){
+						animate_this_shit();
+							}, 2500);
 		}
-	}, 2000);
+	}, 2500);
+}
+function animate_this_shit() {
+	$('.company_name').addClass('company_name_animation');
 }
 $('.carusel').slick({
 	arrows: true,
@@ -13,6 +19,9 @@ $('.carusel').slick({
 	dotsClass: "my-dots",
 	nextArrow: '.slick-next',
 	prevArrow: '.slick-prev',
+	 autoplay: true,
+  autoplaySpeed: 2000,
+
 	// draggable: false,
 	// swipe: false
 });

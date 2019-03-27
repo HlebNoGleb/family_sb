@@ -18,7 +18,12 @@ body{
   opacity: 1;
   visibility: visible;
 }
-
+.loading_gif{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
  .preloader.done{
   opacity: 0;
   visibility: hidden;
@@ -41,40 +46,34 @@ body{
 	   position: absolute;
      top: 50%;
      left: 50%;
-     transform: translate(-50%,-50%) scale(1);
+     transform: translate(-50%,-60%) scale(1);
     opacity: 1;
-    filter: drop-shadow( 0px 0px 4px #AEAEAE );
-    /*filter: drop-shadow(3px 3px 5px #000000) drop-shadow(2px 2px 2px #ffcc00);*/
-   /*animation: 5s hand infinite alternate;*/
+    /*filter: drop-shadow( -5px 5px 15px rgba(255,255,255,.5));*/
 
 }
 .company_name_screen{  
-    width: 60vw;
-    height: 60vh;
+    width: 40vw;
+    height: 40vh;
+    /*filter: drop-shadow( -5px 5px 5px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));*/
    /*animation: 5s hand infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
 
+}
+.company_name_animation{
+  animation: 1s flash_bg forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-iteration-count: 2;
 }
 
  #logo{ 
   /*animation: 5s hand infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);;*/
 
 }
-@keyframes hand{
-	0%{
-		filter: drop-shadow( 0px 0px 10px  #1f40ff );
-	}
-	25%{
-		filter: drop-shadow( 0px 0px 10px  #7d33ff );
-	}
-	50%{
-		filter: drop-shadow( 0px 0px 10px  #bf1eff );
-	}	
-	75%{
-		filter: drop-shadow( 0px 0px 10px  #d6177f );
-	}
-	100%{
-		filter: drop-shadow( 0px 0px 10px  #ff0127 );
-	}
+@keyframes flash_bg {
+    0% { filter: drop-shadow( -5px 5px 5px rgba(255,255,255,0)) drop-shadow( -2px 2px 1px rgba(255,255,255,0));} 
+    2% { filter: drop-shadow( -5px 5px 5px rgba(255,255,255,.5)) drop-shadow( -2px 2px 1px rgba(255,255,255,.5));}
+    6% { filter: drop-shadow( -5px 5px 5px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));}
+    10% { filter: drop-shadow( -5px 5px 5px rgba(255,255,255,.5)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));}
+    14% { filter: drop-shadow( -5px 5px 5px rgba(255,255,255,.1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));} 
+    100% { filter: drop-shadow( -5px 5px 5px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7)); }
 }
 .buttons{
 	margin: auto;
@@ -86,6 +85,7 @@ body{
 	top: 75%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+  width: 100%;
 }
 
 
@@ -231,7 +231,7 @@ body{
     background: none;
     border: 1px solid;
     /* line-height: 1; */
-    padding: 20px 0px;
+    padding: 15px 0px;
     border-radius: 25px;
 }
 
@@ -376,32 +376,32 @@ polyline {
     transform: translate(-50%,-49.4%);
 }
 .carusel .chel1{
-	filter:drop-shadow(0 0 10px #1e1e1e);
+	/*filter:drop-shadow(0 0 10px #1e1e1e);*/
 	position: relative;
 	background-image: url(../img/deck1.png);
 	height: 100vh;
--webkit-background-size: contain;
-	background-size: contain;
+-webkit-background-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .carusel .chel2{
-	filter:drop-shadow(0 0 10px #1e1e1e);
+	/*filter:drop-shadow(0 0 10px #1e1e1e);*/
 	position: relative;
 	background-image: url(../img/deck2.png);
 	height: 100vh;
--webkit-background-size: contain;
-	background-size: contain;
+-webkit-background-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 .carusel .chel3{
-	filter:drop-shadow(0 0 10px #1e1e1e);
+	/*filter:drop-shadow(0 0 10px #1e1e1e);*/
 	position: relative;
 	background-image: url(../img/deck3.png);
 	height: 100vh;
--webkit-background-size: contain;
-	background-size: contain;
+-webkit-background-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -428,11 +428,20 @@ polyline {
 .main_slider{
 	height: 100vh;
 	position: relative;
-	background-image: url(../img/woman.png);
-	-webkit-background-size: contain;
-	background-size: contain;
+	 background-image: url(../img/woman.png);
+	-webkit-background-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+.main_slider_bg{
+  height: 100vh;
+  position: relative;
+   background-image: url(../img/1.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hands{
   /*filter:drop-shadow(0 0 10px #585858);*/
@@ -440,8 +449,8 @@ polyline {
   width: 100%;
   background-image: url(../img/hands.png);
   height: 100vh;
-  -webkit-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index:2;
@@ -727,10 +736,18 @@ figure {
   height: 14em;
   background-color: #000;
 }
+@media (max-width: 863px){
+    .post_right {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+}
+}
 @media (min-width: 30em) {
   .post_right > *:last-child {
     height: 18em;
   }
+
 }
 @media (min-width: 54em) {
   .post_right > *:last-child {
@@ -929,6 +946,66 @@ figure {
   height:320px;
   margin:10px;
 }
+.carusel .chel1{
+  /*filter:drop-shadow(0 0 10px #1e1e1e);*/
+  position: relative;
+  background-image: url(../img/deck1.png);
+  height: 100vh;
+-webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.carusel .chel2{
+  /*filter:drop-shadow(0 0 10px #1e1e1e);*/
+  position: relative;
+  background-image: url(../img/deck2.png);
+  height: 100vh;
+-webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.carusel .chel3{
+  /*filter:drop-shadow(0 0 10px #1e1e1e);*/
+  position: relative;
+  background-image: url(../img/deck3.png);
+  height: 100vh;
+-webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main_slider{
+  height: 100vh;
+  position: relative;
+   background-image: url(../img/woman.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main_slider_bg{
+  height: 100vh;
+  position: relative;
+   background-image: url(../img/1.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hands{
+  /*filter:drop-shadow(0 0 10px #585858);*/
+  position: absolute;
+  width: 100%;
+  background-image: url(../img/hands.png);
+  height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index:2;
+}
 }
 @media (max-width: 768px) {
   .flex_row{
@@ -951,7 +1028,7 @@ figure {
   margin:0;
 }
 }
-@media (max-width: 450px) {
+@media (max-width: 620px) {
   .company_name{
   
   margin: -20px auto;
@@ -968,13 +1045,26 @@ figure {
 
 }
   .company_name_screen{
-     transform: translate(-50%,-70%) scale(1);
-     -webkit-transform: translate(-50%,-70%) scale(1);
+     transform: translate(-50%,-80%) scale(1);
+     -webkit-transform: translate(-50%,-80%) scale(1);
     /*filter: drop-shadow( 10px 10px 5px  #000 );*/
    /*animation: 5s hand infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
 
 }
-
+.buttons {
+    margin: auto;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
   .wrap {
     width:100%;
     flex-direction: column;
@@ -1028,6 +1118,16 @@ figure {
     color: #fff;
     font-size: 3vw;
     line-height: 15px;
+}
+}
+@media (max-width: 400px){
+  article h1 {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: 3em;
+    font-weight: 900;
+    line-height: 0.9;
+    color: white;
 }
 }
 
