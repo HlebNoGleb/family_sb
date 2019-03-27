@@ -25,15 +25,6 @@ $('.carusel').slick({
 	// draggable: false,
 	// swipe: false
 });
-var video = $('.vid').hover(hoverVideo, hideVideo);
-
-function hoverVideo(e) {  
-    $('video', this).get(0).play(); 
-}
-
-function hideVideo(e) {
-    $('video', this).get(0).pause(); 
-}
 
 function Length() {
 	var path0 = document.querySelector('#logo0');

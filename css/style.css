@@ -134,25 +134,6 @@ body {
   background: wheat;
 }
 
-.wrap-video {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-
-}
-.vid{
-  width: 45%;
-}
-.wrap-video video {
-  transition: .4s all ease;
-  width: 100%;
-  background-image: url(../img/cloth.jpg);
-}
-video:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-}
 
 @-webkit-keyframes pulse {
   0% {
