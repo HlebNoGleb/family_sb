@@ -120,6 +120,20 @@
 	margin: 0;
 	font-family: 'Exo 2';
 }
+.footer-distributed  .developer{
+	line-height: 20px;
+	color:  #fff;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+	font-family: 'Exo 2';
+	text-decoration: none;
+	transition: .2s all ease;
+}
+.footer-distributed  .developer:hover{
+	color: #5383d3;
+}
+
 
 .footer-distributed .footer-company-about span{
 	display: block;
