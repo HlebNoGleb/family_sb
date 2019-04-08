@@ -1,10 +1,31 @@
 body{
 	font-family: 'Exo 2';
-	background-color: #000!important;
-   transform: translate3d(0px, 0px, 0px);
+	background-color: black!important;
+   /*transform: translate3d(0px, 0px, 0px);*/
     transition: all 700ms ease;
-    overflow: hidden;
+    /*overflow: hidden;*/
     max-width: 100%;
+}
+::-webkit-scrollbar {
+ display:none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display:none;
+  background:transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  display:none;
+  background:transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  display:none;
+  background:transparent;
 }
 .preloader{
   position: fixed;
@@ -55,13 +76,13 @@ body{
 .company_name_screen{  
     width: 40vw;
     height: 40vh;
-    /*filter: drop-shadow( -5px 5px 5px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));*/
+    filter: drop-shadow( -5px 5px 5px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));
    /*animation: 5s hand infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
 
 }
 .company_name_animation{
-  animation: 1s flash_bg forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation-iteration-count: 2;
+  animation: 1s flash_bg infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /*animation-iteration-count: 2;*/
 }
 
  #logo{ 
@@ -96,16 +117,31 @@ body{
   box-shadow: inset 0 0 0 2em var(--hover);
 }
 .buttons .pulse{
-  background-color:#000;
-   filter: drop-shadow( 0px 0px 1px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));
+  /*background-image: url(../img/button_bg_blue.png);*/
+  border: 2px solid #fff;
+  -webkit-background-size: contain;
+  background-size: contain;
+   /*filter: drop-shadow( 0px 0px 1px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));*/
+   text-shadow: 1px 1px 0 #1e1e1e, 2px 2px 0 #000;
+
 }
 .buttons .pulse1{
-  background-color:#000;
-   filter: drop-shadow( 0px 0px 1px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));
+  /*background-image: url(../img/button_bg_pink.png);*/
+  border: 2px solid #fff;
+  -webkit-background-size: contain;
+  background-size: contain;
+   /*filter: drop-shadow( 0px 0px 1px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));*/
+   text-shadow: 1px 1px 0 #1e1e1e, 2px 2px 0 #000;
+
 }
 .buttons .pulse2{
-  background-color:#000;
-  filter: drop-shadow( 0px 0px 1px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));
+  /*background-image: url(../img/button_bg_red.png);*/
+  border: 2px solid #fff;
+  -webkit-background-size: contain;
+  background-size: contain;
+  /*filter: drop-shadow( 0px 0px 1px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7));*/
+  text-shadow: 1px 1px 0 #1e1e1e, 2px 2px 0 #000;
+
 }
 .pulse:hover {
   -webkit-animation: pulse 1s;
@@ -392,7 +428,7 @@ polyline {
 	/*filter:drop-shadow(0 0 10px #1e1e1e);*/
 	position: relative;
 	background-image: url(../img/deck1.png);
-	height: 100vh;
+	height: 120vh;
 -webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -402,7 +438,7 @@ polyline {
 	/*filter:drop-shadow(0 0 10px #1e1e1e);*/
 	position: relative;
 	background-image: url(../img/deck2.png);
-	height: 100vh;
+	height: 120vh;
 -webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -412,7 +448,7 @@ polyline {
 	/*filter:drop-shadow(0 0 10px #1e1e1e);*/
 	position: relative;
 	background-image: url(../img/deck3.png);
-	height: 100vh;
+	height: 120vh;
 -webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -439,7 +475,7 @@ polyline {
   height: 100vh;
 }*/
 .main_slider{
-	height: 100vh;
+	height: 120vh;
 	position: relative;
 	 background-image: url(../img/woman.png);
 	-webkit-background-size: cover;
@@ -448,7 +484,7 @@ polyline {
 	background-position: center;
 }
 .main_slider_bg{
-  height: 100vh;
+  height: 120vh;
   position: relative;
    background-image: url(../img/1.png);
   -webkit-background-size: cover;
@@ -461,7 +497,7 @@ polyline {
   position: absolute;
   width: 100%;
   background-image: url(../img/hands.png);
-  height: 100vh;
+  height: 120vh;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -656,6 +692,7 @@ figure {
 @media (min-width: 20em) {
   .post {
     font-size: 102.5%;
+    text-align: left;
   }
 }
 @media (min-width: 30em) {
@@ -736,6 +773,7 @@ figure {
 .post_right {
   display: flex;
   width: 100%;
+  text-align: right;
 }
 @media (min-width: 54em) {
   .post_right {
@@ -803,6 +841,8 @@ figure {
   justify-content: space-between;
   padding: 2em;
   overflow-y: auto;
+  color: #fff;
+
 }
 .post__category {
   position: relative;
@@ -948,6 +988,411 @@ figure {
 
 
 /*//////////////////////////////////// ADVANTAGES ////////////////////////////////////*/
+
+/*////////////////////////////////////video///////////////////////////////////*/
+
+
+
+
+
+main {
+  font-size: 0;
+}
+main .column.left,
+main .column.right {
+  background: #000;
+  display: block;
+  position: relative;
+  font-size: 1rem;
+  width: 100%;
+  min-height: 0;
+  vertical-align: top;
+
+}
+@media (min-width: 641px) {
+    main .column.left,
+    main .column.right {
+      display: inline-block;
+      width: 50%;
+      min-height: 100vh;
+    }
+    main .column.left {
+      position: absolute;  
+    }
+    main .column.right {
+      margin-left: 50%;
+      overflow-y:scroll; 
+      height: 100vh;
+    }
+}
+
+.video-banner {
+  display: block;
+}
+@media (min-width: 641px) {
+  .video-banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+}
+
+.video-banner .video-banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.video-banner-headline {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  
+  /*font-family: 'Source Sans Pro', sans-serif;*/
+  font-size: 1.25em;
+  font-weight: 900;
+  line-height: 1.0em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+@media (min-width: 641px) {
+  .video-banner-headline {
+    left: 2em;
+    bottom: 2.75em;
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+}
+.video-banner-icon-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.0);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(1.0);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1.0);
+  -o-transform: translateX(-50%) translateY(-50%) scale(1.0);
+  transform: translateX(-50%) translateY(-50%) scale(1.0);
+  
+  -webkit-transition: 
+    all 0.2s ease-out 0.05s;
+  transition: 
+    all 0.2s ease-out 0.05s;
+}
+@media (min-width: 641px) {
+  .video-banner-icon-play {
+    width: 4.5em;
+    height: 4.5em;
+  }
+}
+.video-banner-icon-play:hover {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.2);
+  -moz-transform: translateX(-50%) translateY(-50%) scale(1.2);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1.2);
+  -o-transform: translateX(-50%) translateY(-50%) scale(1.2);
+  transform: translateX(-50%) translateY(-50%) scale(1.2);
+  
+  background: #330099;
+}
+
+.content {
+  display: block;
+  min-height: 100vh;
+  max-width: 40rem;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+}
+@media (min-width: 641px) {
+  .content {
+    margin: 4.75rem auto;
+    padding: 2.5rem;
+  }
+}
+
+.content h1,
+.content h2,
+.content p {
+  /*font-family: 'Source Sans Pro', sans-serif;*/
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #fff;
+  text-align: left;
+}
+.content h1 {
+  font-size: 3.25em;
+  font-weight: 200;
+  line-height: 1.0em;
+  
+  margin: 0 0 0.5rem 0;
+}
+@media (min-width: 641px) {
+  .content h1 {
+    font-size: 4em;
+  }
+}
+.content h2 {
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.155em;
+  
+  margin-top: 3em;
+}
+
+/* buttons */
+.content .button-group {
+  margin-top: 1em;
+}
+.content .button {
+  display: inline-block;
+  padding: 1em 2em;
+  min-width: 8em;
+  text-align: center;
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: 1.5em;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+  
+  /* button theme - secondary is default */
+  background: #f0f0f0;
+  color: #2B2B2B;
+  
+  -webkit-transition: 
+    all 0.2s ease-out 0.05s;
+  transition: 
+    all 0.2s ease-out 0.05s;
+}
+.content .button ~ .button {
+  margin-left: 0.5em;
+}
+.content .button:hover {
+  background: #e5e5e5;
+}
+/* primary button overrides */
+.content .button.primary {
+  background: #E50055;
+  color: #fff;
+}
+.content .button.primary:hover {
+  background: #9D00E5;
+}
+
+
+/* video thumbnail grid */
+.content .video-thumb-grid {
+  position: relative;
+  font-size: 0; /* collapse the white-space */
+  width: calc(100% + 2rem);
+  margin: 0 -1rem;
+}
+.content .video-thumb {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 25px;
+  /*animation: 1s flash_bg infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);*/
+  
+  text-decoration: none;
+  
+  /* calculate the width, gutters, and aspect ratio */
+  width: calc((100% - 4rem) / 2);
+  height: 0;
+  padding-top: calc(((100% - 4rem) / 2) * 0.5625); /* 16:9 calc */
+  
+  margin: 1rem 1rem; /* gutters */
+  
+  overflow: hidden; /* clipping */
+  
+  position: relative; /* enable positioning for inner content */
+  
+  font-size: 1rem; /* reset the font size */
+  
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
+  box-shadow: 0 0 0 rgba(0,0,0,0.0);
+  
+  -webkit-transition: 
+    all 0.2s ease-out 0.05s;
+  transition: 
+    all 0.2s ease-out 0.05s;
+}
+.content .video-thumb:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(13,1,61,0.35);
+}
+.content .video-thumb:hover .content .video-thumb img{
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(13,1,61,0.35);
+}
+.content .video-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  
+  /* position inside the 16:9 container */
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* clipping for source images that are letterboxed */
+  object-fit: cover;
+  object-position: 50% 50%;
+  
+  background: #2b2b2b;
+}
+
+
+
+
+
+
+
+
+/* Video Modal
+-----------------------------------------*/
+.video-modal,
+.video-modal .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+}
+.video-modal {
+  overflow: hidden;
+  position: fixed;
+  opacity: 0.0;
+
+  -webkit-transform: translate(500%,0%);
+  transform: translate(500%,0%);
+
+  -webkit-transition: -webkit-transform 0s linear 0s;
+  transition: transform 0s linear 0s;
+
+
+  /* using flexbox for vertical centering */
+
+  /* Flexbox display */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  /* Vertical alignment */
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.video-modal .overlay {
+  z-index: 0;
+  background: rgba(13,1,61,0.82); /* overlay color */
+
+  opacity: 0.0;
+
+  -webkit-transition: opacity 0.2s ease-out 0.05s;
+  transition: opacity 0.2s ease-out 0.05s;
+}
+
+
+.video-modal-content {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+  
+  margin: 0 auto;
+
+  overflow-y: visible;
+
+  background: #000;
+  
+  width: calc(100% - 12em);
+  height: 0;
+  padding-top: calc((100% - 12em) * 0.5625); /* 16:9 calc */
+}
+
+/* Scaling to fit within the current Viewport size:
+   When viewport aspect ratio is greater than 16:9
+   work off the height instead of the width for calc */
+ @media (min-aspect-ratio: 16/9) {
+  .video-modal-content {
+    width: 0;
+    height: calc(100vh - 10em);
+    padding-top: 0;
+    padding-left: calc((100vh - 10em) * 1.7778); /* 16:9 calc */
+  }
+}
+
+/* Mobile Layout Tweaks - side margins reduced */
+@media (max-width: 640px) {
+  .video-modal-content {
+    width: calc(100% - 1em);
+    padding-top: calc((100% - 1em) * 0.5625); /* 16:9 calc */
+  }
+}
+
+/* modal close button */
+.close-video-modal {
+  display: block;
+    position: absolute;
+    left: 0;
+    top: -40px;
+
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* set the iframe element to stretch to fit its parent element */
+iframe#youtube {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  background: #000;
+  box-shadow: 0px 2px 16px rgba(0,0,0,0.5);
+}
+
+/* show the modal: 
+   add class to the body to reveal */
+.show-video-modal .video-modal {
+  opacity: 1.0;
+
+  transform: translate(0%,0%);
+  -webkit-transform: translate(0%,0%);
+}
+.show-video-modal .video-modal .overlay {
+  opacity: 1.0;
+}
+.show-video-modal .video-modal-content {
+  transform: translate(0%,0%);
+  -webkit-transform: translate(0%,0%);
+}
 @media (max-width: 1279px) {
   .wrap {
     width:100%;
@@ -963,7 +1408,7 @@ figure {
   /*filter:drop-shadow(0 0 10px #1e1e1e);*/
   position: relative;
   background-image: url(../img/deck1.png);
-  height: 100vh;
+  height: 120vh;
 -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -973,7 +1418,7 @@ figure {
   /*filter:drop-shadow(0 0 10px #1e1e1e);*/
   position: relative;
   background-image: url(../img/deck2.png);
-  height: 100vh;
+  height: 120vh;
 -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -983,14 +1428,14 @@ figure {
   /*filter:drop-shadow(0 0 10px #1e1e1e);*/
   position: relative;
   background-image: url(../img/deck3.png);
-  height: 100vh;
+  height: 120vh;
 -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .main_slider{
-  height: 100vh;
+  height: 120vh;
   position: relative;
    background-image: url(../img/woman.png);
   -webkit-background-size: cover;
@@ -999,7 +1444,7 @@ figure {
   background-position: center;
 }
 .main_slider_bg{
-  height: 100vh;
+  height: 120vh;
   position: relative;
    background-image: url(../img/1.png);
   -webkit-background-size: cover;
@@ -1012,7 +1457,7 @@ figure {
   position: absolute;
   width: 100%;
   background-image: url(../img/hands.png);
-  height: 100vh;
+  height: 120vh;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
