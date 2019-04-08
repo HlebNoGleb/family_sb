@@ -1185,8 +1185,8 @@ main .column.right {
   transition: 
     all 0.2s ease-out 0.05s;
 }
-.content .button ~ .button {
-  margin-left: 0.5em;
+.content .button {
+  margin: 0.5em;
 }
 .content .button:hover {
   background: #e5e5e5;

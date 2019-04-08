@@ -1,3 +1,9 @@
+$(".buttons, .post__link").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href');
+        var  top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
 document.body.onload = function(){
 	setTimeout(function(){
 		var preloader = document.getElementById('page-preloader');
@@ -27,7 +33,7 @@ window.setInterval(function(){
  	  }
   
       else{
-     		 $('.company_name').removeClass('company_name_animation');
+     	 	$('.company_name').removeClass('company_name_animation');
   	  }
 }, 500);
  
