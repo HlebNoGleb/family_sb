@@ -74,6 +74,7 @@ body{
      transform: translate(-50%,-60%) scale(1);
     opacity: 1;
     transition: .2s all ease;
+    padding: 10px;
     /*filter: drop-shadow( -5px 5px 15px rgba(255,255,255,.5));*/
 
 }
