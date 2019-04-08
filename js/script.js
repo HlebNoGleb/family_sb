@@ -13,7 +13,7 @@ document.body.onload = function(){
 			// $('body').css({'overflow-y':'scroll'});
 				setTimeout(function(){
 						animate_this_shit();
-							}, 2500);
+							}, 4500);
 		}
 	}, 2500);
 }
