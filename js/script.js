@@ -9,6 +9,7 @@ document.body.onload = function(){
 		var preloader = document.getElementById('page-preloader');
 		if(!preloader.classList.contains('done')){
 			preloader.classList.add('done');
+			$('.company_name_screen').css({'filter': 'drop-shadow( -5px 5px 5px rgba(255,255,255,1)) drop-shadow( -2px 2px 1px rgba(255,255,255,.7))'});
 			// $('body').css({'overflow-y':'scroll'});
 				setTimeout(function(){
 						animate_this_shit();
@@ -24,17 +25,17 @@ document.body.onload = function(){
 //   }, 3000);
 function animate_this_shit() {
 	$('.company_name').addClass('company_name_animation');
+	
 	window.setInterval(function(){
   var number = 1 + Math.floor(Math.random() * 10);
   console.log(number);
         if(number>=5){
      		 $('.company_name').addClass('company_name_animation');
- 	  }
-  
+      }  
       else{
      	 	$('.company_name').removeClass('company_name_animation');
   	  }
-}, 500);
+}, 400);
 }
 
  
