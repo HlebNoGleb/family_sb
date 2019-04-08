@@ -24,8 +24,7 @@ document.body.onload = function(){
 //   }, 3000);
 function animate_this_shit() {
 	$('.company_name').addClass('company_name_animation');
-}
-window.setInterval(function(){
+	window.setInterval(function(){
   var number = 1 + Math.floor(Math.random() * 10);
   console.log(number);
         if(number>=5){
@@ -36,6 +35,8 @@ window.setInterval(function(){
      	 	$('.company_name').removeClass('company_name_animation');
   	  }
 }, 500);
+}
+
  
 $('.carusel').slick({
 	arrows: true,
