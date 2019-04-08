@@ -1363,6 +1363,9 @@ main .column.right {
     width: calc(100% - 1em);
     padding-top: calc((100% - 1em) * 0.5625); /* 16:9 calc */
   }
+  .arrow{
+    transform:scale(.6)!important;
+  }
 }
 
 /* modal close button */
